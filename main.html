@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp cưới Đăng Phong & Thế Trang</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="music-btn" title="Bật/Tắt nhạc">🔇</button>
+</head>
+<body class="main-page">
+
+    <div class="bg-pattern"></div>
+
+    <div class="wedding-card">
+        
+        <!-- PANEL 1: ẢNH BÌA + LỊCH + SAVE THE DATE -->
+        <section class="section panel-1">
+            <div class="hero-image">
+                <img src="images/anh-bia.png" alt="Ảnh cưới Đăng Phong & Thế Trang">
+                <div class="hero-overlay"></div>
+                <div class="monogram-top">ĐP & TT</div>
+                <div class="hero-text">
+                    <h1 class="names">ĐĂNG PHONG<br><span class="script">&</span><br>THẾ TRANG</h1>
+                </div>
+            </div>
+
+            <div class="calendar-section">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <span>OCTOBER 2026</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-name">MON</div><div class="day-name">TUE</div><div class="day-name">WED</div>
+                        <div class="day-name">THU</div><div class="day-name">FRI</div><div class="day-name">SAT</div><div class="day-name">SUN</div>
+                        
+                        <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+                        <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+                        <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div>
+                        <div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div>
+                        <div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day highlight">23</div><div class="day">24</div><div class="day">25</div>
+                        <div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="save-the-date">
+                <p class="quote">"WE'VE BEEN WRITING OUR LOVE STORY FOR YEARS... AND THE NEXT CHAPTER BEGINS IN"</p>
+                <p class="script-title">Save The Date</p>
+                <p class="footer-date">23 . 10 . 2026</p>
+            </div>
+        </section>
+
+        <!-- PANEL 2: LỜI MỜI + ĐỊA CHỈ 2 NHÀ + GIA ĐÌNH -->
+        <section class="section panel-2">
+            <div class="frame-img-container">
+                <div class="frame-decor-top">🌸</div>
+                <img src="images/anh1.png" alt="Ảnh mời cưới">
+                <div class="frame-decor-bottom">🌿</div>
+            </div>
+
+            <div class="invitation-text">
+                <p class="invite-sub">TRÂN TRỌNG KÍNH MỜI THAM DỰ BUỔI TIỆC CƯỚI<br>CÙNG GIA ĐÌNH CHÚNG TÔI</p>
+                <h2 class="main-names">ĐĂNG PHONG<br><span class="script">&</span><br>THẾ TRANG</h2>
+                
+                <div class="date-time-block">
+                    <p class="weekday">THỨ SÁU</p>
+                    <div class="date-row">
+                        <span class="month">THÁNG 10</span>
+                        <span class="big-date">23</span>
+                        <span class="year">NĂM 2026</span>
+                    </div>
+                    <p class="lunar">(Tức ngày 14 tháng 09 năm Bính Ngọ)</p>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <p class="location-label">NHÀ GÁI</p>
+                        <h3 class="venue">TƯ GIA</h3>
+                        <p class="address">Cụm 7, Thôn Ngọc Kiệu,<br>Xã Ô Diên, TP. Hà Nội</p>
+                        <a href="https://maps.app.goo.gl/v3n253NyjJojP4wM9" target="_blank" rel="noopener noreferrer" class="btn-map">📍 XEM CHỈ ĐƯỜNG</a>
+                    </div>
+                    <div class="location-card">
+                        <p class="location-label">NHÀ TRAI</p>
+                        <h3 class="venue">TƯ GIA</h3>
+                        <p class="address">Thôn Đông, Xã Kim Chung,<br>TP. Hà Nội</p>
+                        <a href="https://maps.app.goo.gl/v3n253NyjJojP4wM9" target="_blank" rel="noopener noreferrer" class="btn-map">📍 XEM CHỈ ĐƯỜNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark-section">
+                <p class="dark-sub">WITH YOU</p>
+                <h3 class="dark-title">ALLOVER AGAIN</h3>
+                <p class="dark-sub">WITH LOVE</p>
+
+                <div class="family-grid">
+                    <div class="family-card">
+                        <img src="images/anh-co-dau.png" alt="Cô dâu Thế Trang">
+                        <p class="script-name">Cô dâu</p>
+                        <h4 class="name-title">THẾ TRANG</h4>
+                        <div class="parents">
+                            <p>NHÀ GÁI</p>
+                            <p>Ông: Nguyễn Thế Quý</p>
+                            <p>Bà: Nguyễn Thị Thơm</p>
+                        </div>
+                    </div>
+                    <div class="family-card">
+                        <img src="images/anh-chu-re.png" alt="Chú rể Đăng Phong">
+                        <p class="script-name">Chú rể</p>
+                        <h4 class="name-title">ĐĂNG PHONG</h4>
+                        <div class="parents">
+                            <p>NHÀ TRAI</p>
+                            <p>Ông: Nguyễn Lan</p>
+                            <p>Bà: Nguyễn Đăng Cường</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANEL 3: COUNTDOWN + RSVP + ALBUM + THANK YOU -->
+        <section class="section panel-3">
+            <div class="top-image">
+                <img src="images/anh2.png" alt="Ảnh cưới">
+            </div>
+
+            <div class="countdown-container">
+                <h2>COUNTDOWN</h2>
+                <div class="countdown">
+                    <div class="cd-item"><span id="days">00</span><p>Ngày</p></div>
+                    <div class="cd-item"><span id="hours">00</span><p>Giờ</p></div>
+                    <div class="cd-item"><span id="minutes">00</span><p>Phút</p></div>
+                    <div class="cd-item"><span id="seconds">00</span><p>Giây</p></div>
+                </div>
+            </div>
+
+            <div class="rsvp-container">
+                <p class="rsvp-note">Vui lòng xác nhận sự tham dự của bạn để chúng mình chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng cảm ơn!</p>
+                
+                <form id="rsvpForm" class="form-loi-chuc">
+                    <input type="text" id="ten" placeholder="Tên của bạn" required autocomplete="name">
+                    <textarea id="loiChuc" placeholder="Gửi lời chúc đến cô dâu chú rể" rows="3" required></textarea>
+                    
+                    <select id="xacNhan" required>
+                        <option value="" disabled selected>Xác nhận tham dự?</option>
+                        <option value="Có, tôi sẽ tham dự">Có, tôi sẽ tham dự</option>
+                        <option value="Rất tiếc, tôi không thể tham dự">Rất tiếc, tôi không thể tham dự</option>
+                    </select>
+
+                    <select id="soLuongKhach" required>
+                        <option value="" disabled selected>Bạn có tham dự cùng ai khác không?</option>
+                        <option value="Đi một mình">Đi một mình</option>
+                        <option value="Đi cùng 1 người">Đi cùng 1 người</option>
+                        <option value="Đi cùng 2 người">Đi cùng 2 người</option>
+                        <option value="Đi cùng gia đình">Đi cùng gia đình</option>
+                    </select>
+
+                    <select id="khachCuaAi" required>
+                        <option value="" disabled selected>Bạn là khách mời của ai?</option>
+                        <option value="Khách của Cô dâu">Khách của Cô dâu (Thế Trang)</option>
+                        <option value="Khách của Chú rể">Khách của Chú rể (Đăng Phong)</option>
+                        <option value="Khách của cả hai">Khách của cả hai</option>
+                    </select>
+
+                    <button type="submit" id="btnGuiLoiChuc" class="btn-submit">XÁC NHẬN</button>
+                </form>
+            </div>
+
+            <!-- ALBUM ẢNH - CUỘN NGANG -->
+            <div class="album-section">
+                <div class="album-header">
+                    <span class="leaf-icon">🌿</span>
+                    <h2>Album Ảnh</h2>
+                    <p class="album-sub">Our Memories</p>
+                    <p class="album-hint">← Vuốt ngang để xem thêm →</p>
+                </div>
+                
+                <div class="album-scroll">
+                    <div class="album-track">
+                        <div class="album-item">
+                            <img src="images/anh4.png" alt="Album 1">
+                        </div>
+                        <div class="album-item">
+                            <img src="images/anh5.png" alt="Album 2">
+                        </div>
+                        <div class="album-item">
+                            <img src="images/anh6.png" alt="Album 3">
+                        </div>
+                        <div class="album-item">
+                            <img src="images/anh7.png" alt="Album 4">
+                        </div>
+                        <div class="album-item">
+                            <img src="images/anh8.png" alt="Album 5">
+                        </div>
+                        <div class="album-item">
+                            <img src="images/anh9.png" alt="Album 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thank-you-container">
+                <div class="thank-you-img">
+                    <img src="images/anh3.png" alt="Thank you">
+                </div>
+                <div class="thank-you-text">
+                    <p>Hân hạnh được đón tiếp bạn trong ngày đặc biệt nhất của chúng mình. Sẽ thật hạnh phúc khi có bạn ở đó, cùng sẻ chia niềm vui và chứng kiến khoảnh khắc ý nghĩa này của chúng mình.</p>
+                    <h2 class="script">Thank You!</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wishes-list-section">
+            <h3 class="script-title">Lời chúc từ mọi người</h3>
+            <div id="danhSachLoiChuc" class="danh-sach-loi-chuc"></div>
+        </section>
+
+    </div>
+
+    <!-- ============================================================
+         COUNTDOWN - Script độc lập, chạy ngay không phụ thuộc Firebase
+         Đích: 24/10/2026 00:00:00
+    ============================================================ -->
+    <script>
+        (function() {
+            const targetDate = new Date("2026-10-24T00:00:00").getTime();
+
+            function updateCountdown() {
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+
+                if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    daysEl.innerText = "00";
+                    hoursEl.innerText = "00";
+                    minutesEl.innerText = "00";
+                    secondsEl.innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.innerText = days.toString().padStart(2, '0');
+                hoursEl.innerText = hours.toString().padStart(2, '0');
+                minutesEl.innerText = minutes.toString().padStart(2, '0');
+                secondsEl.innerText = seconds.toString().padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+    </script>
+
+    <!-- Script Firebase (form RSVP + lời chúc + nhạc nền) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

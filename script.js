@@ -1,7 +1,36 @@
 // ========================================
-// FIREBASE (Sử dụng phiên bản 10.12.2 ổn định)
+// NHẠC NỀN
 // ========================================
+const music = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-btn');
+let isPlaying = false;
 
+document.body.addEventListener('click', () => {
+    if (!isPlaying) {
+        music.play().then(() => {
+            isPlaying = true;
+            musicBtn.textContent = '🔊';
+        }).catch(e => console.log('Autoplay blocked'));
+    }
+}, { once: true });
+
+if (musicBtn) {
+    musicBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isPlaying) {
+            music.pause();
+            musicBtn.textContent = '🔇';
+        } else {
+            music.play();
+            musicBtn.textContent = '🔊';
+        }
+        isPlaying = !isPlaying;
+    });
+}
+
+// ========================================
+// FIREBASE
+// ========================================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { 
     getFirestore, 
@@ -13,9 +42,6 @@ import {
     serverTimestamp 
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// ========================================
-// FIREBASE CONFIG
-// ========================================
 const firebaseConfig = {
     apiKey: "AIzaSyCsKyM4oVminz8NVSuWhxklF8R7a20oD0o",
     authDomain: "thiep-cuoi-d5d37.firebaseapp.com",
@@ -30,26 +56,29 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // ========================================
-// GỬI LỜI CHÚC
+// GỬI LỜI CHÚC & XÁC NHẬN (RSVP)
 // ========================================
+const rsvpForm = document.getElementById("rsvpForm");
 const btnGuiLoiChuc = document.getElementById("btnGuiLoiChuc");
 
-if (btnGuiLoiChuc) {
-    btnGuiLoiChuc.addEventListener("click", async function () {
+if (rsvpForm) {
+    rsvpForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
         const tenInput = document.getElementById("ten");
         const loiChucInput = document.getElementById("loiChuc");
+        const xacNhanInput = document.getElementById("xacNhan");
+        const soLuongKhachInput = document.getElementById("soLuongKhach");
+        const khachCuaAiInput = document.getElementById("khachCuaAi");
+
         const ten = tenInput.value.trim();
         const loiChuc = loiChucInput.value.trim();
+        const xacNhan = xacNhanInput.value;
+        const soLuongKhach = soLuongKhachInput.value;
+        const khachCuaAi = khachCuaAiInput.value;
 
-        if (ten === "") {
-            alert("Bạn vui lòng nhập tên nhé ❤️");
-            tenInput.focus();
-            return;
-        }
-
-        if (loiChuc === "") {
-            alert("Bạn vui lòng viết lời chúc nhé 💌");
-            loiChucInput.focus();
+        if (ten === "" || loiChuc === "" || xacNhan === "") {
+            alert("Vui lòng điền đầy đủ thông tin nhé ❤️");
             return;
         }
 
@@ -60,18 +89,21 @@ if (btnGuiLoiChuc) {
             await addDoc(collection(db, "loi_chuc"), {
                 ten: ten,
                 loiChuc: loiChuc,
+                xacNhan: xacNhan,
+                soLuongKhach: soLuongKhach,
+                khachCuaAi: khachCuaAi,
                 thoiGian: serverTimestamp()
             });
 
-            alert("💕 Cảm ơn bạn! Lời chúc đã được gửi.");
-            tenInput.value = "";
-            loiChucInput.value = "";
+            alert("💕 Cảm ơn bạn! Thông tin xác nhận đã được gửi.");
+            rsvpForm.reset();
+            
         } catch (error) {
             console.error("Lỗi Firebase:", error);
-            alert("Không thể gửi lời chúc.\n\n" + error.message);
+            alert("Không thể gửi thông tin.\n\n" + error.message);
         } finally {
             btnGuiLoiChuc.disabled = false;
-            btnGuiLoiChuc.textContent = "💕 Gửi lời chúc";
+            btnGuiLoiChuc.textContent = "XÁC NHẬN";
         }
     });
 }
