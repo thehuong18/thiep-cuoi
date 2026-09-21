@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thiệp cưới của chúng mình</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PHẦN MỞ ĐẦU -->
+    <section class="hero">
+
+        <img src="images/anh-bia.jpg" class="anh-bia">
+
+        <p>WE ARE GETTING MARRIED</p>
+
+        <h1>
+            Nguyễn Văn A
+            <br>
+            &
+            <br>
+            Trần Thị B
+        </h1>
+
+        <p>20 • 12 • 2026</p>
+
+        <button onclick="moThiep()">
+            💌 Mở thiệp
+        </button>
+
+    </section>
+
+
+    <!-- NỘI DUNG THIỆP -->
+    <main id="noiDung">
+
+        <!-- LỜI MỜI -->
+        <section class="section">
+
+            <h2>💕 Lời mời</h2>
+
+            <p>
+                Chúng mình rất vui khi được chia sẻ
+                khoảnh khắc đặc biệt này cùng bạn.
+            </p>
+
+            <p>
+                Trân trọng kính mời bạn đến chung vui
+                cùng gia đình chúng mình trong ngày cưới.
+            </p>
+
+        </section>
+
+
+        <!-- THỜI GIAN -->
+        <section class="section">
+
+            <h2>📅 Thời gian</h2>
+
+            <h3>10:30 - Chủ nhật</h3>
+
+            <p>Ngày 20 tháng 12 năm 2026</p>
+
+        </section>
+
+
+        <!-- ĐỊA ĐIỂM -->
+        <section class="section">
+
+            <h2>📍 Địa điểm</h2>
+
+            <h3>Nhà hàng ABC</h3>
+
+            <p>
+                123 Đường XYZ, Hà Nội
+            </p>
+
+            <a
+                href="LINK_GOOGLE_MAPS"
+                target="_blank"
+                class="button">
+                Xem bản đồ
+            </a>
+
+        </section>
+
+
+        <!-- ALBUM -->
+        <section class="section">
+
+            <h2>📸 Album ảnh</h2>
+
+            <div class="gallery">
+
+                <img src="images/anh1.jpg">
+                <img src="images/anh2.jpg">
+                <img src="images/anh3.jpg">
+                <img src="images/anh4.jpg">
+                <img src="images/anh5.jpg">
+                <img src="images/anh6.jpg">
+
+            </div>
+
+        </section>
+
+
+        <!-- LỜI CHÚC -->
+        <section class="section">
+
+            <h2>💌 Gửi lời chúc</h2>
+
+            <input
+                type="text"
+                id="ten"
+                placeholder="Tên của bạn">
+
+            <textarea
+                id="loiChuc"
+                placeholder="Viết lời chúc...">
+            </textarea>
+
+            <button onclick="guiLoiChuc()">
+                💕 Gửi lời chúc
+            </button>
+
+            <div id="danhSachLoiChuc"></div>
+
+        </section>
+
+
+        <!-- CẢM ƠN -->
+        <section class="section">
+
+            <h2>❤️ Thank You</h2>
+
+            <p>
+                Cảm ơn bạn đã dành thời gian
+                đến chung vui cùng chúng mình.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script type="module">
+    import {
+        initializeApp
+    } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        orderBy
+    } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCsKyM4oVminz8NVSuWhxklF8R7a20oD0o",
+        authDomain: "thiep-cuoi-d5d37.firebaseapp.com",
+        projectId: "thiep-cuoi-d5d37",
+        storageBucket: "thiep-cuoi-d5d37.firebasestorage.app",
+        messagingSenderId: "549776281872",
+        appId: "1:549776281872:web:f57f21cb8e3be5d4355595",
+        measurementId: "G-HZ6S51ME78"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
