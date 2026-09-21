@@ -1,83 +1,24 @@
-* {
-    box-sizing: border-box;
+/* ================================
+   LỜI CHÚC
+================================ */
+
+.loi-chuc-item {
+    background: white;
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff8f8;
-    color: #555;
-}
-
-.hero {
-    min-height: 100vh;
-    text-align: center;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.anh-bia {
-    width: 280px;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 150px 150px 20px 20px;
-}
-
-.hero h1 {
-    font-family: serif;
-    font-size: 42px;
-    color: #8b5e5e;
-}
-
-button,
-.button {
-    border: none;
-    padding: 13px 25px;
-    border-radius: 30px;
-    background: #d99a9a;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.section {
-    max-width: 700px;
-    margin: auto;
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.section h2 {
+.loi-chuc-item h4 {
+    margin: 0 0 8px;
     color: #a96f6f;
-    font-family: serif;
-    font-size: 30px;
+    font-size: 17px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-input,
-textarea {
-    width: 100%;
-    margin: 8px 0;
-    padding: 13px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-
-textarea {
-    min-height: 120px;
+.loi-chuc-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: #666;
 }
