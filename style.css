@@ -1,9 +1,20 @@
 /* ========================================
-   CÀI ĐẶT CHUNG
+   CÀI ĐẶT CHUNG & BIẾN MÀU
 ======================================== */
+:root {
+    --primary-green: #6B7C5C;
+    --light-green: #8FA082;
+    --bg-cream: #FDFBF7;
+    --text-dark: #4A4A4A;
+    --text-light: #7A7A7A;
+    --accent-gold: #C5A059;
+    --white: #FFFFFF;
+}
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -11,683 +22,489 @@ html {
 }
 
 body {
-    margin: 0;
-
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    background:
-        linear-gradient(
-            180deg,
-            #fff8f8 0%,
-            #fffdfd 50%,
-            #fff6f6 100%
-        );
-
-    color: #665858;
-
-    line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.script {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
 
 /* ========================================
-   PHẦN MỞ ĐẦU
+   HERO SECTION
 ======================================== */
-
 .hero {
-
-    min-height: 100vh;
-
-    padding:
-        50px
-        20px;
-
+    min-height: 100svh;
+    position: relative;
     display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
     align-items: center;
-
+    justify-content: center;
     text-align: center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #fff,
-            #fff4f4
-        );
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80') center/cover no-repeat;
+    padding: 20px;
 }
 
-
-/* Ảnh tạm */
-
-.anh-bia-tam {
-
-    width: 280px;
-
-    height: 360px;
-
-    border-radius:
-        150px
-        150px
-        25px
-        25px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #f9dede,
-            #f5caca
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 65px;
-
-    box-shadow:
-        0 15px 40px
-        rgba(180, 120, 120, 0.18);
-
-    margin-bottom: 30px;
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(253, 251, 247, 0.85);
 }
 
-
-/* Dòng tiếng Anh */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease;
+}
 
 .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--primary-green);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
-    margin: 5px 0 15px;
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+}
 
-    font-size: 13px;
+.names .script {
+    font-size: 3.2rem;
+    color: var(--primary-green);
+    line-height: 1.1;
+}
 
+.ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--accent-gold);
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
     letter-spacing: 4px;
-
-    color: #b28a8a;
-
-    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 30px;
 }
-
-
-/* Tên cô dâu chú rể */
-
-.hero h1 {
-
-    margin: 0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-weight: 400;
-
-    font-size: clamp(
-        36px,
-        7vw,
-        60px
-    );
-
-    line-height: 1.35;
-
-    color: #8f6262;
-}
-
-
-.hero h1 span {
-
-    display: block;
-
-    font-size: 28px;
-
-    margin: 5px 0;
-
-    color: #c28d8d;
-}
-
-
-.ngay-cuoi {
-
-    margin:
-        20px
-        0
-        30px;
-
-    font-family: Georgia, serif;
-
-    font-size: 20px;
-
-    letter-spacing: 4px;
-
-    color: #a67474;
-}
-
 
 /* ========================================
    BUTTON
 ======================================== */
-
 .btn {
-
-    border: none;
-
-    padding:
-        13px
-        28px;
-
-    border-radius: 50px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #d99a9a,
-            #bd7c7c
-        );
-
-    color: white;
-
-    font-size: 15px;
-
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid var(--primary-green);
+    background: transparent;
+    color: var(--primary-green);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-
-    box-shadow:
-        0 8px 20px
-        rgba(180, 110, 110, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 0;
 }
-
 
 .btn:hover {
-
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 12px 25px
-        rgba(180, 110, 110, 0.3);
+    background: var(--primary-green);
+    color: var(--white);
 }
-
 
 .btn:disabled {
-
-    opacity: 0.65;
-
+    opacity: 0.5;
     cursor: wait;
-
-    transform: none;
 }
 
-
 /* ========================================
-   SECTION
+   SECTION CHUNG
 ======================================== */
-
 .section {
-
-    width: 100%;
-
-    max-width: 720px;
-
-    margin:
-        0 auto;
-
-    padding:
-        80px
-        25px;
-
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
+.section-header {
+    margin-bottom: 40px;
+}
 
-.icon {
+.leaf-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
 
-    font-size: 28px;
-
+.section h2 {
+    font-size: 2.2rem;
+    color: var(--primary-green);
     margin-bottom: 5px;
 }
 
-
-.section h2 {
-
-    margin:
-        5px
-        0
-        10px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 34px;
-
-    font-weight: 400;
-
-    color: #976868;
+.section .subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    text-transform: uppercase;
 }
-
-
-.line {
-
-    width: 55px;
-
-    height: 2px;
-
-    margin:
-        0 auto
-        25px;
-
-    background: #d9a3a3;
-}
-
-
-.section p {
-
-    font-size: 16px;
-
-    color: #716565;
-
-    max-width: 600px;
-
-    margin:
-        10px auto;
-}
-
 
 /* ========================================
-   THỜI GIAN
+   WELCOME SECTION (COLLAGE NGHỆ THUẬT)
 ======================================== */
-
-.section h3 {
-
-    color: #8e6262;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size: 22px;
-
-    font-weight: 500;
-
-    margin:
-        15px
-        0
-        5px;
-}
-
-
-/* ========================================
-   LINK / NÚT BẢN ĐỒ
-======================================== */
-
-.button {
-
-    display: inline-block;
-
-    margin-top: 15px;
-}
-
-
-/* ========================================
-   ALBUM
-======================================== */
-
-.gallery {
-
+.artistic-collage {
+    position: relative;
     width: 100%;
+    height: 400px;
+    margin: 30px 0;
+}
 
-    display: grid;
+.collage-img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 4px solid var(--white);
+    transition: transform 0.3s ease;
+}
 
-    grid-template-columns:
-        repeat(2, 1fr);
+.img-main {
+    width: 65%;
+    height: 280px;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+}
 
-    gap: 12px;
+.img-top {
+    width: 45%;
+    height: 200px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transform: rotate(6deg);
+}
 
+.img-bottom {
+    width: 55%;
+    height: 220px;
+    bottom: 0;
+    left: 15%;
+    z-index: 3;
+    transform: rotate(-4deg);
+}
+
+.img-side {
+    width: 40%;
+    height: 180px;
+    bottom: 20px;
+    right: 0;
+    z-index: 4;
+    transform: rotate(8deg);
+}
+
+.collage-img:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+.welcome-text {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   INFO SECTION
+======================================== */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(107, 124, 92, 0.08);
+    border: 1px solid rgba(107, 124, 92, 0.1);
+}
+
+.info-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.info-card .highlight {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--primary-green);
+    padding-bottom: 2px;
+    transition: opacity 0.3s;
+}
+
+.btn-map:hover {
+    opacity: 0.7;
+}
+
+/* ========================================
+   STORY SECTION (TIMELINE)
+======================================== */
+.story-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-top: 30px;
 }
 
-
-/* Ảnh tạm */
-
-.anh-tam {
-
-    width: 100%;
-
-    height: 230px;
-
-    border-radius: 15px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #f8dddd,
-            #f3caca
-        );
-
+.story-item {
     display: flex;
-
-    justify-content: center;
-
+    flex-direction: column;
     align-items: center;
-
-    font-size: 38px;
-
-    color: #b77f7f;
-
-    box-shadow:
-        0 5px 20px
-        rgba(160, 100, 100, 0.08);
+    gap: 20px;
+    text-align: center;
 }
 
-
-.album-note {
-
-    margin-top: 20px !important;
-
-    font-size: 14px !important;
-
-    color: #a98a8a !important;
-
-    font-style: italic;
+.story-img {
+    width: 80%;
+    max-width: 300px;
 }
 
+.story-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.story-content h4 {
+    font-size: 1.4rem;
+    color: var(--primary-green);
+    margin-bottom: 5px;
+}
+
+.story-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* ========================================
+   ALBUM (MASONRY GRID)
+======================================== */
+.masonry-grid {
+    column-count: 2;
+    column-gap: 15px;
+    margin-top: 30px;
+}
+
+.polaroid {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    background: var(--white);
+    padding: 8px 8px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+
+.polaroid .caption {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* ========================================
    FORM LỜI CHÚC
 ======================================== */
-
-.loi-chuc-section {
-
-    max-width: 720px;
-}
-
-
 .form-loi-chuc {
-
-    margin-top: 30px;
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 12px;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 40px;
 }
 
-
-input,
-textarea {
-
+input, textarea {
     width: 100%;
-
-    border:
-        1px solid #ead5d5;
-
-    background: #fff;
-
-    padding:
-        14px
-        16px;
-
-    border-radius: 12px;
-
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    font-size: 15px;
-
-    color: #555;
-
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    background: var(--white);
     outline: none;
-
-    transition:
-        border-color 0.2s,
-        box-shadow 0.2s;
+    transition: border-color 0.3s;
 }
 
-
-input:focus,
-textarea:focus {
-
-    border-color: #d39b9b;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(211, 155, 155, 0.12);
+input:focus, textarea:focus {
+    border-color: var(--primary-green);
 }
-
 
 textarea {
-
     resize: vertical;
-
-    min-height: 130px;
+    min-height: 100px;
 }
-
-
-input::placeholder,
-textarea::placeholder {
-
-    color: #b9a6a6;
-}
-
 
 .btn-gui {
-
-    align-self: center;
-
-    margin-top: 5px;
+    background: var(--primary-green);
+    color: var(--white);
+    border: none;
 }
 
-
-/* ========================================
-   DANH SÁCH LỜI CHÚC
-======================================== */
+.btn-gui:hover {
+    background: var(--light-green);
+}
 
 .danh-sach-loi-chuc {
-
-    margin-top: 35px;
-
     text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
 }
-
 
 .loi-chuc-item {
-
-    background: white;
-
-    padding:
-        18px
-        20px;
-
-    margin-bottom: 14px;
-
-    border-radius: 15px;
-
-    border:
-        1px solid #f0dfdf;
-
-    box-shadow:
-        0 5px 18px
-        rgba(150, 100, 100, 0.07);
+    background: var(--white);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-green);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-
 
 .loi-chuc-item h4 {
-
-    margin:
-        0
-        0
-        6px;
-
-    color: #a36f6f;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size: 17px;
-
-    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-bottom: 5px;
 }
-
 
 .loi-chuc-item p {
-
-    margin: 0;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-
-    color: #686060;
+    font-size: 0.9rem;
+    color: var(--text-light);
 }
-
 
 /* ========================================
    THANK YOU
 ======================================== */
-
 .thank-you {
-
     padding-bottom: 100px;
 }
 
-
 .heart {
-
-    font-size: 38px;
-
-    color: #d18c8c;
-
-    margin-bottom: 5px;
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
 }
-
 
 .love {
-
-    color: #b27a7a !important;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-style: italic;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-green) !important;
+    margin-top: 15px;
 }
 
-
 /* ========================================
-   MOBILE
+   RESPONSIVE (MÁY TÍNH)
 ======================================== */
-
-@media (max-width: 600px) {
-
-    .hero {
-
-        min-height: 100svh;
-
-        padding:
-            35px
-            18px;
+@media (min-width: 768px) {
+    .names .script { font-size: 5rem; }
+    .ampersand { font-size: 3rem; }
+    
+    .info-section {
+        flex-direction: row;
+        justify-content: center;
     }
-
-
-    .anh-bia-tam {
-
-        width: 220px;
-
-        height: 290px;
-
-        border-radius:
-            120px
-            120px
-            20px
-            20px;
-
-        font-size: 50px;
+    
+    .info-card {
+        flex: 1;
     }
-
-
-    .subtitle {
-
-        font-size: 10px;
-
-        letter-spacing: 3px;
+    
+    .story-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 40px;
     }
-
-
-    .hero h1 {
-
-        font-size: 38px;
+    
+    .story-item.reverse {
+        flex-direction: row-reverse;
     }
-
-
-    .hero h1 span {
-
-        font-size: 23px;
+    
+    .story-img {
+        flex: 1;
     }
-
-
-    .ngay-cuoi {
-
-        font-size: 17px;
-
-        letter-spacing: 3px;
+    
+    .story-content {
+        flex: 1;
     }
-
-
-    .section {
-
-        padding:
-            60px
-            18px;
+    
+    .masonry-grid {
+        column-count: 3;
     }
-
-
-    .section h2 {
-
-        font-size: 30px;
+    
+    .artistic-collage {
+        height: 500px;
     }
+    
+    .img-main { width: 50%; height: 350px; }
+    .img-top { width: 35%; height: 250px; }
+    .img-bottom { width: 40%; height: 280px; }
+    .img-side { width: 30%; height: 220px; }
+}
 
-
-    .section p {
-
-        font-size: 15px;
-    }
-
-
-    .gallery {
-
-        gap: 8px;
-    }
-
-
-    .anh-tam {
-
-        height: 160px;
-
-        font-size: 30px;
-    }
-
-
-    input,
-    textarea {
-
-        font-size: 16px;
-    }
-
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
