@@ -1,24 +1,693 @@
-/* ================================
-   LỜI CHÚC
-================================ */
+/* ========================================
+   CÀI ĐẶT CHUNG
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff8f8 0%,
+            #fffdfd 50%,
+            #fff6f6 100%
+        );
+
+    color: #665858;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PHẦN MỞ ĐẦU
+======================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding:
+        50px
+        20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff,
+            #fff4f4
+        );
+}
+
+
+/* Ảnh tạm */
+
+.anh-bia-tam {
+
+    width: 280px;
+
+    height: 360px;
+
+    border-radius:
+        150px
+        150px
+        25px
+        25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f9dede,
+            #f5caca
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 65px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(180, 120, 120, 0.18);
+
+    margin-bottom: 30px;
+}
+
+
+/* Dòng tiếng Anh */
+
+.subtitle {
+
+    margin: 5px 0 15px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #b28a8a;
+
+    font-weight: 500;
+}
+
+
+/* Tên cô dâu chú rể */
+
+.hero h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+    font-size: clamp(
+        36px,
+        7vw,
+        60px
+    );
+
+    line-height: 1.35;
+
+    color: #8f6262;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin: 5px 0;
+
+    color: #c28d8d;
+}
+
+
+.ngay-cuoi {
+
+    margin:
+        20px
+        0
+        30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    color: #a67474;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.btn {
+
+    border: none;
+
+    padding:
+        13px
+        28px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d99a9a,
+            #bd7c7c
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(180, 110, 110, 0.2);
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(180, 110, 110, 0.3);
+}
+
+
+.btn:disabled {
+
+    opacity: 0.65;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.section {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin:
+        0 auto;
+
+    padding:
+        80px
+        25px;
+
+    text-align: center;
+}
+
+
+.icon {
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+
+.section h2 {
+
+    margin:
+        5px
+        0
+        10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    color: #976868;
+}
+
+
+.line {
+
+    width: 55px;
+
+    height: 2px;
+
+    margin:
+        0 auto
+        25px;
+
+    background: #d9a3a3;
+}
+
+
+.section p {
+
+    font-size: 16px;
+
+    color: #716565;
+
+    max-width: 600px;
+
+    margin:
+        10px auto;
+}
+
+
+/* ========================================
+   THỜI GIAN
+======================================== */
+
+.section h3 {
+
+    color: #8e6262;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin:
+        15px
+        0
+        5px;
+}
+
+
+/* ========================================
+   LINK / NÚT BẢN ĐỒ
+======================================== */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   ALBUM
+======================================== */
+
+.gallery {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* Ảnh tạm */
+
+.anh-tam {
+
+    width: 100%;
+
+    height: 230px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8dddd,
+            #f3caca
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 38px;
+
+    color: #b77f7f;
+
+    box-shadow:
+        0 5px 20px
+        rgba(160, 100, 100, 0.08);
+}
+
+
+.album-note {
+
+    margin-top: 20px !important;
+
+    font-size: 14px !important;
+
+    color: #a98a8a !important;
+
+    font-style: italic;
+}
+
+
+/* ========================================
+   FORM LỜI CHÚC
+======================================== */
+
+.loi-chuc-section {
+
+    max-width: 720px;
+}
+
+
+.form-loi-chuc {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid #ead5d5;
+
+    background: #fff;
+
+    padding:
+        14px
+        16px;
+
+    border-radius: 12px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    color: #555;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #d39b9b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(211, 155, 155, 0.12);
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+    color: #b9a6a6;
+}
+
+
+.btn-gui {
+
+    align-self: center;
+
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   DANH SÁCH LỜI CHÚC
+======================================== */
+
+.danh-sach-loi-chuc {
+
+    margin-top: 35px;
+
+    text-align: left;
+}
+
 
 .loi-chuc-item {
+
     background: white;
-    margin-top: 15px;
-    padding: 18px;
+
+    padding:
+        18px
+        20px;
+
+    margin-bottom: 14px;
+
     border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    border:
+        1px solid #f0dfdf;
+
+    box-shadow:
+        0 5px 18px
+        rgba(150, 100, 100, 0.07);
 }
+
 
 .loi-chuc-item h4 {
-    margin: 0 0 8px;
-    color: #a96f6f;
+
+    margin:
+        0
+        0
+        6px;
+
+    color: #a36f6f;
+
+    font-family:
+        Georgia,
+        serif;
+
     font-size: 17px;
+
+    font-weight: 500;
 }
 
+
 .loi-chuc-item p {
+
     margin: 0;
-    line-height: 1.6;
-    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #686060;
+}
+
+
+/* ========================================
+   THANK YOU
+======================================== */
+
+.thank-you {
+
+    padding-bottom: 100px;
+}
+
+
+.heart {
+
+    font-size: 38px;
+
+    color: #d18c8c;
+
+    margin-bottom: 5px;
+}
+
+
+.love {
+
+    color: #b27a7a !important;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-style: italic;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        min-height: 100svh;
+
+        padding:
+            35px
+            18px;
+    }
+
+
+    .anh-bia-tam {
+
+        width: 220px;
+
+        height: 290px;
+
+        border-radius:
+            120px
+            120px
+            20px
+            20px;
+
+        font-size: 50px;
+    }
+
+
+    .subtitle {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+
+    .hero h1 span {
+
+        font-size: 23px;
+    }
+
+
+    .ngay-cuoi {
+
+        font-size: 17px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .section {
+
+        padding:
+            60px
+            18px;
+    }
+
+
+    .section h2 {
+
+        font-size: 30px;
+    }
+
+
+    .section p {
+
+        font-size: 15px;
+    }
+
+
+    .gallery {
+
+        gap: 8px;
+    }
+
+
+    .anh-tam {
+
+        height: 160px;
+
+        font-size: 30px;
+    }
+
+
+    input,
+    textarea {
+
+        font-size: 16px;
+    }
+
 }

@@ -12,37 +12,53 @@
 
 <body>
 
-    <!-- PHẦN MỞ ĐẦU -->
+    <!-- =========================
+         PHẦN MỞ ĐẦU
+    ========================== -->
+
     <section class="hero">
 
-        <img src="images/anh-bia.jpg" class="anh-bia">
+        <div class="anh-bia-tam">
+            💕
+        </div>
 
-        <p>WE ARE GETTING MARRIED</p>
+        <p class="subtitle">
+            WE ARE GETTING MARRIED
+        </p>
 
         <h1>
             Nguyễn Văn A
-            <br>
-            &
-            <br>
+            <span>&</span>
             Trần Thị B
         </h1>
 
-        <p>20 • 12 • 2026</p>
+        <p class="ngay-cuoi">
+            20 • 12 • 2026
+        </p>
 
-        <button onclick="moThiep()">
+        <button id="btnMoThiep" class="btn">
             💌 Mở thiệp
         </button>
 
     </section>
 
 
-    <!-- NỘI DUNG THIỆP -->
+    <!-- =========================
+         NỘI DUNG
+    ========================== -->
+
     <main id="noiDung">
 
+
         <!-- LỜI MỜI -->
+
         <section class="section">
 
-            <h2>💕 Lời mời</h2>
+            <div class="icon">💕</div>
+
+            <h2>Lời mời</h2>
+
+            <div class="line"></div>
 
             <p>
                 Chúng mình rất vui khi được chia sẻ
@@ -58,95 +74,167 @@
 
 
         <!-- THỜI GIAN -->
+
         <section class="section">
 
-            <h2>📅 Thời gian</h2>
+            <div class="icon">📅</div>
 
-            <h3>10:30 - Chủ nhật</h3>
+            <h2>Thời gian</h2>
 
-            <p>Ngày 20 tháng 12 năm 2026</p>
+            <div class="line"></div>
+
+            <h3>
+                10:30 - Chủ nhật
+            </h3>
+
+            <p>
+                Ngày 20 tháng 12 năm 2026
+            </p>
 
         </section>
 
 
         <!-- ĐỊA ĐIỂM -->
+
         <section class="section">
 
-            <h2>📍 Địa điểm</h2>
+            <div class="icon">📍</div>
 
-            <h3>Nhà hàng ABC</h3>
+            <h2>Địa điểm</h2>
+
+            <div class="line"></div>
+
+            <h3>
+                Nhà hàng ABC
+            </h3>
 
             <p>
                 123 Đường XYZ, Hà Nội
             </p>
 
             <a
-                href="LINK_GOOGLE_MAPS"
-                target="_blank"
-                class="button">
-                Xem bản đồ
+                href="#"
+                class="btn button">
+                📍 Xem bản đồ
             </a>
 
         </section>
 
 
         <!-- ALBUM -->
+
         <section class="section">
 
-            <h2>📸 Album ảnh</h2>
+            <div class="icon">📸</div>
+
+            <h2>Album ảnh</h2>
+
+            <div class="line"></div>
 
             <div class="gallery">
 
-                <img src="images/anh1.jpg">
-                <img src="images/anh2.jpg">
-                <img src="images/anh3.jpg">
-                <img src="images/anh4.jpg">
-                <img src="images/anh5.jpg">
-                <img src="images/anh6.jpg">
+                <div class="anh-tam">📷</div>
+                <div class="anh-tam">📷</div>
+                <div class="anh-tam">📷</div>
+                <div class="anh-tam">📷</div>
+                <div class="anh-tam">📷</div>
+                <div class="anh-tam">📷</div>
+
+            </div>
+
+            <p class="album-note">
+                Album ảnh sẽ được cập nhật sau 💕
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             GỬI LỜI CHÚC
+        ========================== -->
+
+        <section class="section loi-chuc-section">
+
+            <div class="icon">💌</div>
+
+            <h2>Gửi lời chúc</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Hãy để lại một lời chúc thật đẹp
+                cho chúng mình nhé!
+            </p>
+
+
+            <div class="form-loi-chuc">
+
+                <input
+                    type="text"
+                    id="ten"
+                    placeholder="Tên của bạn"
+                    autocomplete="name">
+
+
+                <textarea
+                    id="loiChuc"
+                    placeholder="Viết lời chúc dành cho cô dâu chú rể..."
+                    rows="5"></textarea>
+
+
+                <button
+                    id="btnGuiLoiChuc"
+                    class="btn btn-gui">
+
+                    💕 Gửi lời chúc
+
+                </button>
+
+            </div>
+
+
+            <!-- DANH SÁCH LỜI CHÚC -->
+
+            <div
+                id="danhSachLoiChuc"
+                class="danh-sach-loi-chuc">
 
             </div>
 
         </section>
 
 
-        <!-- LỜI CHÚC -->
-        <section class="section">
-
-            <h2>💌 Gửi lời chúc</h2>
-
-            <input
-                type="text"
-                id="ten"
-                placeholder="Tên của bạn">
-
-            <textarea
-                id="loiChuc"
-                placeholder="Viết lời chúc...">
-            </textarea>
-
-            <button id="btnGuiLoiChuc">
-                💕 Gửi lời chúc
-            </button>
-
-            <div id="danhSachLoiChuc"></div>
-
-        </section>
-
-
         <!-- CẢM ƠN -->
-        <section class="section">
 
-            <h2>❤️ Thank You</h2>
+        <section class="section thank-you">
+
+            <div class="heart">♥</div>
+
+            <h2>Thank You</h2>
 
             <p>
                 Cảm ơn bạn đã dành thời gian
                 đến chung vui cùng chúng mình.
             </p>
 
+            <p class="love">
+                With Love ❤️
+            </p>
+
         </section>
 
     </main>
-    <script src="script.js"></script>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         
+         QUAN TRỌNG:
+         phải có type="module"
+    ========================== -->
+
+    <script type="module" src="script.js"></script>
 
 </body>
+
 </html>
