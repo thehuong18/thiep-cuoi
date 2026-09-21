@@ -57,6 +57,7 @@ const db = getFirestore(app);
 
 // ========================================
 // GỬI LỜI CHÚC & XÁC NHẬN (RSVP)
+// CHỈ BẮT BUỘC TÊN VÀ LỜI CHÚC
 // ========================================
 const rsvpForm = document.getElementById("rsvpForm");
 const btnGuiLoiChuc = document.getElementById("btnGuiLoiChuc");
@@ -77,8 +78,16 @@ if (rsvpForm) {
         const soLuongKhach = soLuongKhachInput.value;
         const khachCuaAi = khachCuaAiInput.value;
 
-        if (ten === "" || loiChuc === "" || xacNhan === "") {
-            alert("Vui lòng điền đầy đủ thông tin nhé ❤️");
+        // Chỉ bắt buộc Tên và Lời chúc
+        if (ten === "") {
+            alert("Bạn vui lòng nhập tên nhé ❤️");
+            tenInput.focus();
+            return;
+        }
+
+        if (loiChuc === "") {
+            alert("Bạn vui lòng viết lời chúc nhé 💌");
+            loiChucInput.focus();
             return;
         }
 
@@ -89,9 +98,9 @@ if (rsvpForm) {
             await addDoc(collection(db, "loi_chuc"), {
                 ten: ten,
                 loiChuc: loiChuc,
-                xacNhan: xacNhan,
-                soLuongKhach: soLuongKhach,
-                khachCuaAi: khachCuaAi,
+                xacNhan: xacNhan || "Chưa xác nhận",      // Mặc định nếu bỏ trống
+                soLuongKhach: soLuongKhach || "Chưa rõ",  // Mặc định nếu bỏ trống
+                khachCuaAi: khachCuaAi || "Chưa rõ",      // Mặc định nếu bỏ trống
                 thoiGian: serverTimestamp()
             });
 

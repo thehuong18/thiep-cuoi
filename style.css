@@ -921,7 +921,7 @@ select {
 }
 
 /* ========================================
-   WISHES LIST
+   WISHES LIST - ĐÃ SỬA LỖI TRÀN
 ======================================== */
 .wishes-list-section {
     padding: 50px 20px 100px;
@@ -952,6 +952,9 @@ select {
     margin-bottom: 15px;
     border: 1px solid var(--border-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    overflow: hidden;              /* Cắt phần tràn ra ngoài */
+    word-wrap: break-word;         /* Fallback cho trình duyệt cũ */
+    word-break: break-word;        /* Ngắt chữ dài */
 }
 
 .loi-chuc-item h4 {
@@ -959,11 +962,17 @@ select {
     font-size: 1.2rem;
     color: var(--primary-green);
     margin-bottom: 8px;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .loi-chuc-item p {
     font-size: 0.9rem;
     color: var(--text-light);
+    word-break: break-word;        /* Ngắt chữ dài không có khoảng trắng */
+    overflow-wrap: break-word;     /* Ngắt chữ khi vượt khung */
+    white-space: pre-wrap;         /* Giữ xuống dòng + tự động wrap */
+    max-width: 100%;               /* Không vượt quá khung cha */
 }
 
 /* ========================================
